@@ -981,35 +981,37 @@ if selected_topic != "All Lectures":
         st.markdown("<div style='margin-top:16px;'></div>", unsafe_allow_html=True)
 
         if view_mode == "⚡ Quick Summary (1–2 mins read)":
-            st.markdown(f"""
+            st.markdown("""
             <div style="
                 background: linear-gradient(135deg,#0b1220,#020617);
-                border: 1px solid #14532d;
+                border: 1px solid #22c55e;
                 border-left: 5px solid #22c55e;
                 border-radius: 14px;
                 padding: 18px;
-                color: #e5e7eb;
-                line-height: 1.7;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+                margin-bottom: 10px;
             ">
-                {st.session_state["lecture_summary_quick"]}
+                <b>⚡ Quick Summary</b>
             </div>
             """, unsafe_allow_html=True)
+            
+            st.markdown(st.session_state["lecture_summary_quick"])
+
         else:
-            st.markdown(f"""
+            st.markdown("""
             <div style="
                 background: linear-gradient(135deg,#0b1220,#020617);
-                border: 1px solid #1e3a8a;
+                border: 1px solid #3b82f6;
                 border-left: 5px solid #3b82f6;
                 border-radius: 14px;
                 padding: 18px;
-                color: #e5e7eb;
-                line-height: 1.75;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+                margin-bottom: 10px;
             ">
-                {st.session_state["lecture_summary_full"]}
+                <b>📚 Detailed Notes</b>
             </div>
             """, unsafe_allow_html=True)
+            
+            st.markdown(st.session_state["lecture_summary_full"])
+
         
         st.markdown("<div style='height:14px;'></div>", unsafe_allow_html=True)
 
