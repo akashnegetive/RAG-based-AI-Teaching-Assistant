@@ -199,11 +199,9 @@ def summarize_lecture_both(title):
     Lecture Transcript:
     {full_text}
     """
-
-
-    with st.status("🧠 Generating executive and detailed summaries..."):
-        quick_summary = inference(quick_prompt)
-        full_summary = inference(full_prompt)
+    
+    quick_summary = inference(quick_prompt)
+    full_summary = inference(full_prompt)
 
     return quick_summary, full_summary
 
