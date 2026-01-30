@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from chroma_client import get_chroma
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("api_key"))
+client = OpenAI()
 
 def create_embeddings_batch(texts, batch_size=50):
     all_embeddings = []
