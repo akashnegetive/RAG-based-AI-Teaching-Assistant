@@ -990,7 +990,7 @@ if selected_topic != "All Lectures":
                 padding: 18px;
                 margin-bottom: 10px;
             ">
-                <b>⚡ Quick Summary</b>
+                <b style="color:#ffffff;">⚡ Quick Summary</b>
             </div>
             """, unsafe_allow_html=True)
             
@@ -1006,7 +1006,7 @@ if selected_topic != "All Lectures":
                 padding: 18px;
                 margin-bottom: 10px;
             ">
-                <b>📚 Detailed Notes</b>
+                <b style="color:#ffffff;">📚 Detailed Notes</b>
             </div>
             """, unsafe_allow_html=True)
             
