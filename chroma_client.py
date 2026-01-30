@@ -1,8 +1,8 @@
 import os
 import chromadb
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CHROMA_DIR = os.path.join(BASE_DIR, "chroma_store")
+CHROMA_DIR = os.path.join(os.path.expanduser("~"), "chroma_store")
+os.makedirs(CHROMA_DIR, exist_ok=True)
 
 def get_chroma():
     client = chromadb.PersistentClient(path=CHROMA_DIR)
