@@ -1,0 +1,445 @@
+{
+  "chunks": [
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 0.0,
+      "end": 9.600000381469727,
+      "text": " So guys, many people get confused when we talk about bias and variance, because let's say that I have a model for the training data set"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 9.600000381469727,
+      "end": 18.0,
+      "text": " It gives us somewhere around 90% accuracy. Let's say I am getting a 90% accuracy."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 18.0,
+      "end": 23.600000381469727,
+      "text": " For the test data, I may probably getting somewhere around 70% accuracy."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 23.600000381469727,
+      "end": 29.600000381469727,
+      "text": " Now tell me which scenario is basically this. Most of the people will be saying that it is overfitting."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 29.600000381469727,
+      "end": 39.599998474121094,
+      "text": " Now when I say overfitting, I basically mention overfitting by low bias and high variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 39.599998474121094,
+      "end": 45.599998474121094,
+      "text": " So many people get confused. Krish, tell me just the exact definition of bias and variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 45.599998474121094,
+      "end": 53.599998474121094,
+      "text": " Low bias, obviously you are saying that because the model is performing well with the help of training data set."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 53.599998474121094,
+      "end": 60.599998474121094,
+      "text": " But with respect to the test data set, the model is not performing well. With respect to training data set, why do we always say bias?"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 60.599998474121094,
+      "end": 64.5999984741211,
+      "text": " And with respect to test data set, why do we always say variance?"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 64.5999984741211,
+      "end": 70.5999984741211,
+      "text": " So for this, you need to understand the definition of bias. So let me write down the definition of bias over here."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 70.5999984741211,
+      "end": 92.5999984741211,
+      "text": " So here I can definitely write that bias, it is a phenomena that skews the result of an algorithm"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 92.5999984741211,
+      "end": 117.5999984741211,
+      "text": " in favor or against an idea. I will make you understand the definition, but understand what I have actually written over here."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 117.5999984741211,
+      "end": 122.5999984741211,
+      "text": " It is a phenomena that skews the result of an algorithm in favor or against an idea."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 122.5999984741211,
+      "end": 128.60000610351562,
+      "text": " Whenever I say this specific idea, this idea I will just talk about the training data set initially."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 128.60000610351562,
+      "end": 140.60000610351562,
+      "text": " Now when we train a specific model, suppose if I have this specific model over here, and I am training with this specific training data set."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 140.60000610351562,
+      "end": 148.60000610351562,
+      "text": " So this is my training data set. Now based on the definition, what does it basically say?"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 148.60000610351562,
+      "end": 155.60000610351562,
+      "text": " It is a phenomena that skews the result of an algorithm in favor or against an idea or this specific training data set."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 155.60000610351562,
+      "end": 167.60000610351562,
+      "text": " So even though I am training this particular model with this training data set, it may be in favor of that or it may be against of that."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 167.60000610351562,
+      "end": 173.60000610351562,
+      "text": " So that basically means it may perform well, it may not perform well. If it is not performing well, that basically means the accuracy is down."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 173.60000610351562,
+      "end": 179.60000610351562,
+      "text": " If the accuracy is better, at that point of time what will say? See if the accuracy is better, that time what will say?"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 179.60000610351562,
+      "end": 185.60000610351562,
+      "text": " We will come up with two terms from here. Obviously you understand, there are two scenarios of bias now."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 185.60000610351562,
+      "end": 193.60000610351562,
+      "text": " If it is in favor, that basically means it is performing well with respect to the training data set, I will basically say that it has high bias."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 193.60000610351562,
+      "end": 199.60000610351562,
+      "text": " If it is not able to perform well with the training data set, then here I will say it as low bias."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 199.60000610351562,
+      "end": 205.60000610351562,
+      "text": " I hope everybody is able to understand in this specific thing, because many many many people have this kind of confusion."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 205.60000610351562,
+      "end": 213.60000610351562,
+      "text": " Now similarly, if I talk about variance, let's say, about variance, because you need to understand the definition."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 213.60000610351562,
+      "end": 221.60000610351562,
+      "text": " A definition is very much important. If I just talk about the definition of variance, I am just going to refer like this."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 221.60000610351562,
+      "end": 241.60000610351562,
+      "text": " The variance refers to the changes in the model when using different,"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 241.60000610351562,
+      "end": 255.60000610351562,
+      "text": " when using different portion of the training or test data."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 255.60000610351562,
+      "end": 265.6000061035156,
+      "text": " Now let's understand this particular definition. Variance refers to the changes in the model when using different proportion of the training data or test data."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 265.6000061035156,
+      "end": 273.6000061035156,
+      "text": " We obviously know that whenever initially if I have a model, understand from the definition everything will make sense."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 273.6000061035156,
+      "end": 279.6000061035156,
+      "text": " I am basically training initially with the training data. Because we divide our data set."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 279.6000061035156,
+      "end": 283.6000061035156,
+      "text": " See our data set whenever we are working with, we divide this into two parts."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 283.6000061035156,
+      "end": 291.6000061035156,
+      "text": " One is our train data and test data. Because this is a test data is a part of that particular data set."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 291.6000061035156,
+      "end": 297.6000061035156,
+      "text": " And suppose in this particular training data, it gets trained and performs well. Here I am actually talking about bias."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 297.6000061035156,
+      "end": 305.6000061035156,
+      "text": " But when we come with respect to the prediction of the specific model, at that point of time, I can use other training data."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 305.6000061035156,
+      "end": 309.6000061035156,
+      "text": " That basically means that training data may not be similar or I can also use test data."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 309.6000061035156,
+      "end": 315.6000061035156,
+      "text": " Now in this test data, what we do, we do some kind of predictions. These are my predictions."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 315.6000061035156,
+      "end": 323.6000061035156,
+      "text": " And in this prediction, again, I may get two scenario. I may get two scenario, which is basically mentioned by variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 323.6000061035156,
+      "end": 329.6000061035156,
+      "text": " It refers to the changes in the model when using when using different portion of the training or test data."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 329.6000061035156,
+      "end": 336.6000061035156,
+      "text": " Refers to the changes basically means whether it is able to give a good prediction or wrong predictions. That's it."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 336.6000061035156,
+      "end": 342.6000061035156,
+      "text": " So in this particular scenario, if it gives a good prediction, I may definitely say it as low variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 342.6000061035156,
+      "end": 348.6000061035156,
+      "text": " That basically means the accuracy with the accuracy with respect to the test data is also very good."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 348.6000061035156,
+      "end": 358.6000061035156,
+      "text": " If I probably get a bad, if I probably get a bad accuracy at that time, I basically say it as high variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 358.6000061035156,
+      "end": 365.6000061035156,
+      "text": " So if I talk about three scenarios over here, let's say this is my model one."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 365.6000061035156,
+      "end": 370.6000061035156,
+      "text": " And this is my model two. And this is my model three."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 370.6000061035156,
+      "end": 385.6000061035156,
+      "text": " Now in this scenario, let's consider that my model one has the training accuracy of 90% and test accuracy of 75%."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 385.6000061035156,
+      "end": 395.6000061035156,
+      "text": " Similarly, I have here as my train accuracy of 60% and my test accuracy of 55%."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 395.6000061035156,
+      "end": 404.6000061035156,
+      "text": " Now, similarly, if I have my train accuracy of 90% and my test accuracy of 92%."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 404.6000061035156,
+      "end": 408.6000061035156,
+      "text": " Now tell me what what things you will be getting here?"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 408.6000061035156,
+      "end": 413.6000061035156,
+      "text": " Obviously, you can directly say that find your training accuracy is better. Now you're talking about bias."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 413.6000061035156,
+      "end": 418.6000061035156,
+      "text": " So this basically indicates that this has low bias."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 418.6000061035156,
+      "end": 424.6000061035156,
+      "text": " And since your test accuracy is bad because it is when compared to the train accuracy, it is less."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 424.6000061035156,
+      "end": 431.6000061035156,
+      "text": " So here you are basically going to say high variance. Understand with respect to the definition."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 431.6000061035156,
+      "end": 441.6000061035156,
+      "text": " Similarly, over here, what you will say high bias, high variance, because obviously it is not performing well."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 441.6000061035156,
+      "end": 452.6000061035156,
+      "text": " This is another scenario. The last scenario is that this is the scenario that we want because it is low bias and low variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 452.6000061035156,
+      "end": 457.6000061035156,
+      "text": " OK, many, many people have basically asked me the definition with respect to bias and variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 457.6000061035156,
+      "end": 464.6000061035156,
+      "text": " And here I've actually discussed and this indicates this gives me a generalized model."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 464.6000061035156,
+      "end": 468.6000061035156,
+      "text": " And this is what is our aim when we are working as a data scientist."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 468.6000061035156,
+      "end": 473.6000061035156,
+      "text": " So I hope you have understood the basic difference between bias and variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 473.6000061035156,
+      "end": 478.6000061035156,
+      "text": " And I was able to give you a lot of examples, a lot of understanding with respect to this."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 478.6000061035156,
+      "end": 484.6000061035156,
+      "text": " So I hope you have actually got this particular understanding of this two terms,"
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 484.6000061035156,
+      "end": 489.6000061035156,
+      "text": " which we specifically talk about high bias, low bias, high variance, low variance."
+    },
+    {
+      "number": "NA",
+      "title": "Bias And Variance ",
+      "start": 489.6000061035156,
+      "end": 496.6000061035156,
+      "text": " Right. So this was it from my side, guys. And I hope you have understood this."
+    }
+  ]
+}

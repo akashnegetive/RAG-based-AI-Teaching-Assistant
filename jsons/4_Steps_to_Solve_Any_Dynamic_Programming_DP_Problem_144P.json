@@ -1,0 +1,116 @@
+{
+  "chunks": [
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 0.0,
+      "end": 3.200000047683716,
+      "text": " If you're studying for coding interviews, make sure that you watch this."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 3.200000047683716,
+      "end": 7.800000190734863,
+      "text": " When solving any dynamic programming problem, there is four specific steps that you must do."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 7.800000190734863,
+      "end": 10.600000381469727,
+      "text": " Your first solution should be done through recursive backtracking."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 10.600000381469727,
+      "end": 13.100000381469727,
+      "text": " You get your base cases and then your recursive call."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 13.100000381469727,
+      "end": 17.200000762939453,
+      "text": " But due to repetitive calls, the time complexity of this is O of 2 to the n."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 17.200000762939453,
+      "end": 18.0,
+      "text": " We can do better."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 18.0,
+      "end": 22.100000381469727,
+      "text": " Your second approach should be top-down dynamic programming using memoization."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 22.100000381469727,
+      "end": 27.899999618530273,
+      "text": " That means using a cache so that if you've already seen a call before, you never have to do that function call again."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 27.899999618530273,
+      "end": 30.600000381469727,
+      "text": " This brings our time complexity down to big O of n."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 30.600000381469727,
+      "end": 35.29999923706055,
+      "text": " Your third solution should be bottom-up dynamic programming, otherwise known as tabulation."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 35.29999923706055,
+      "end": 40.20000076293945,
+      "text": " That involves building an array where we go and get the solution in order from the bottom up."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 40.20000076293945,
+      "end": 45.70000076293945,
+      "text": " That is much faster than recursion, not time complexity-wise, but a computer can do this much faster."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 45.70000076293945,
+      "end": 47.79999923706055,
+      "text": " And it opens things up to the fourth solution."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 47.79999923706055,
+      "end": 51.5,
+      "text": " Your fourth solution should be bottom-up no-memory dynamic programming."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 51.5,
+      "end": 54.70000076293945,
+      "text": " We only need to store the information related to the current call."
+    },
+    {
+      "number": "4",
+      "title": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P",
+      "start": 54.70000076293945,
+      "end": 56.900001525878906,
+      "text": " And for us, that's the previous two values."
+    }
+  ]
+}

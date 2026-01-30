@@ -1,0 +1,109 @@
+{
+  "chunks": [
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 0.0,
+      "end": 4.0,
+      "text": " Let's solve maximum subarray, otherwise known as Kedane's algorithm."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 4.0,
+      "end": 8.800000190734863,
+      "text": " Given an array of numbers, we want to find the subarray that has the maximum sum."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 8.800000190734863,
+      "end": 15.199999809265137,
+      "text": " This one has 7 minus 3 plus 4 equals 8, and that is the maximum, so we'd want to return that sum."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 15.199999809265137,
+      "end": 20.15999984741211,
+      "text": " Now we'll initialize the max sum that we saw as negative infinity, and the current sum as 0."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 20.15999984741211,
+      "end": 24.31999969482422,
+      "text": " So we see a minus 2, and we see that that is a better sum than negative infinity,"
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 24.31999969482422,
+      "end": 26.799999237060547,
+      "text": " and our current sum is now minus 2."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 26.799999237060547,
+      "end": 30.639999389648438,
+      "text": " That negative is just going to take away from any of our better sums."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 30.639999389648438,
+      "end": 34.63999938964844,
+      "text": " So before we move on here, we actually set this current sum to be 0."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 34.63999938964844,
+      "end": 40.560001373291016,
+      "text": " Now when we move over here, our current sum updates to 7, and our maximum sum updates as well."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 40.560001373291016,
+      "end": 43.119998931884766,
+      "text": " We move over again, and we get a minus 3."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 43.119998931884766,
+      "end": 47.36000061035156,
+      "text": " That will make our current sum 4, and that does not update our maximum."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 47.36000061035156,
+      "end": 49.279998779296875,
+      "text": " This sum actually is helping us."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 49.279998779296875,
+      "end": 53.279998779296875,
+      "text": " So now when we go to the last element, we get a current sum of 8,"
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 53.279998779296875,
+      "end": 55.7599983215332,
+      "text": " and we get our proper maximum sum of 8."
+    },
+    {
+      "number": "NA",
+      "title": "Maximum_Subarray_-_Kadane_s_Algorithm_--_Leetcode_53_144P",
+      "start": 55.7599983215332,
+      "end": 59.119998931884766,
+      "text": " This yields an optimal O of n and a constant space solution."
+    }
+  ]
+}

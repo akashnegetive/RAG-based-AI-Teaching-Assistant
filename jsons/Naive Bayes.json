@@ -1,0 +1,2314 @@
+{
+  "chunks": [
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 0.0,
+      "end": 2.5999999046325684,
+      "text": " Hello all, my name is Krishnak and welcome to my YouTube channel."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 2.5999999046325684,
+      "end": 6.599999904632568,
+      "text": " So guys, in today's video, we will continue our machine learning playlist."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 6.599999904632568,
+      "end": 13.600000381469727,
+      "text": " And today's algorithm which we will understand completely in-depth is the Naive Bayes Machine Learning Algorithm."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 13.600000381469727,
+      "end": 17.600000381469727,
+      "text": " And Naive Bayes Machine Learning Algorithm is a very easy machine learning algorithm."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 17.600000381469727,
+      "end": 25.600000381469727,
+      "text": " If you have the knowledge of probability, then this algorithm will definitely be very helpful for you to understand."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 26.200000762939453,
+      "end": 32.20000076293945,
+      "text": " Obviously, I have taken a 7-day session, a complete live day session, discussing everyday stats."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 32.20000076293945,
+      "end": 36.20000076293945,
+      "text": " There also, I have discussed things like Bayes Theorem."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 36.20000076293945,
+      "end": 40.20000076293945,
+      "text": " Specifically, what are independent events and what are dependent events."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 40.20000076293945,
+      "end": 43.20000076293945,
+      "text": " I have discussed all these things."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 43.20000076293945,
+      "end": 47.20000076293945,
+      "text": " So, today we will make two videos of Naive Bayes algorithm."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 47.20000076293945,
+      "end": 51.20000076293945,
+      "text": " In this video, we will try to understand their match and how probability is used."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 51.79999923706055,
+      "end": 55.79999923706055,
+      "text": " And in the next video, we will solve a problem statement in front of you."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 55.79999923706055,
+      "end": 59.79999923706055,
+      "text": " We will see Naive Bayes Machine Learning Algorithm."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 59.79999923706055,
+      "end": 69.80000305175781,
+      "text": " Specifically, if I am talking about Naive Bayes, then it helps you to solve classification problem statements."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 69.80000305175781,
+      "end": 71.80000305175781,
+      "text": " So, you should remember."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 71.80000305175781,
+      "end": 77.80000305175781,
+      "text": " Usually, we solve two types of problem statements using machine learning, regression and classification."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 78.4000015258789,
+      "end": 82.4000015258789,
+      "text": " So, if I am talking about Naive Bayes, then it will help you in classification."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 82.4000015258789,
+      "end": 86.4000015258789,
+      "text": " So, let us know what is its match and how probability is used."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 86.4000015258789,
+      "end": 94.4000015258789,
+      "text": " But, before knowing Naive Bayes Machine Learning Algorithm, you have to know one thing, which is known as Bayes Theorem."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 94.4000015258789,
+      "end": 99.4000015258789,
+      "text": " So, before understanding Bayes Theorem, we want to cover one or two more topics."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 100.0,
+      "end": 104.0,
+      "text": " The first topic is Independent Events and Dependent Events."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 108.0,
+      "end": 112.0,
+      "text": " And the second topic is Dependent Events."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 112.0,
+      "end": 114.0,
+      "text": " This is a very important topic."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 116.0,
+      "end": 120.0,
+      "text": " Let us take an example in case of Independent Events."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 120.0,
+      "end": 122.0,
+      "text": " Suppose, I am doing a task."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 122.0,
+      "end": 126.0,
+      "text": " The name of the task is Rolling a Dice."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 126.5999984741211,
+      "end": 134.60000610351562,
+      "text": " Usually, you will see 6 numbers in the dice."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 134.60000610351562,
+      "end": 144.60000610351562,
+      "text": " So, I will have a sample space of 1,2,3,4,5,6."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 145.1999969482422,
+      "end": 152.1999969482422,
+      "text": " Whenever I roll a dice, if I want to find the probability of 1, then it will be 1 by 6."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 152.1999969482422,
+      "end": 156.1999969482422,
+      "text": " Or if I want to find the probability of 2, then it will be 1 by 6."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 156.1999969482422,
+      "end": 159.1999969482422,
+      "text": " Let us say that I rolled a dice for the first time."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 159.1999969482422,
+      "end": 163.1999969482422,
+      "text": " If I want to find the probability of 1, then it will be 1 by 6."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 163.1999969482422,
+      "end": 165.1999969482422,
+      "text": " Probability of 2 will be 1 by 6."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 165.1999969482422,
+      "end": 169.1999969482422,
+      "text": " Similarly, if I want to find the probability of any number, then it will be 1 by 6."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 169.1999969482422,
+      "end": 174.1999969482422,
+      "text": " So, in this case, one event is not impacting the other event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 174.8000030517578,
+      "end": 177.8000030517578,
+      "text": " That is what Independent Events mean."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 177.8000030517578,
+      "end": 182.8000030517578,
+      "text": " For example, if the probability of 1 is 1 by 6 in the first event,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 182.8000030517578,
+      "end": 184.8000030517578,
+      "text": " in the first experiment or in the first throw."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 184.8000030517578,
+      "end": 188.8000030517578,
+      "text": " If I throw again in the second throw, then it will still be 1 by 6."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 188.8000030517578,
+      "end": 192.8000030517578,
+      "text": " So, this event is not impacting this event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 192.8000030517578,
+      "end": 195.8000030517578,
+      "text": " Neither is this event impacting this event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 195.8000030517578,
+      "end": 198.8000030517578,
+      "text": " So, this is what Independent Events mean."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 198.8000030517578,
+      "end": 201.8000030517578,
+      "text": " Two events will never impact each other."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 202.39999389648438,
+      "end": 204.39999389648438,
+      "text": " You can take this as an example."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 204.39999389648438,
+      "end": 206.39999389648438,
+      "text": " You can take many more examples."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 206.39999389648438,
+      "end": 208.39999389648438,
+      "text": " For example, I have taken another example."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 208.39999389648438,
+      "end": 210.39999389648438,
+      "text": " Tossing a coin."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 210.39999389648438,
+      "end": 212.39999389648438,
+      "text": " In the case of tossing a coin,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 212.39999389648438,
+      "end": 214.39999389648438,
+      "text": " no matter how many times I toss a coin,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 214.39999389648438,
+      "end": 218.39999389648438,
+      "text": " my probability of head is going to be 1 by 2."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 218.39999389648438,
+      "end": 221.39999389648438,
+      "text": " Probability of tail is also going to be 1 by 2."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 221.39999389648438,
+      "end": 224.39999389648438,
+      "text": " No matter how many times I toss a coin."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 224.39999389648438,
+      "end": 227.39999389648438,
+      "text": " Now, let us understand what are Dependent Events."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 227.39999389648438,
+      "end": 230.39999389648438,
+      "text": " I hope you have understood about Independent Events."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 231.0,
+      "end": 233.0,
+      "text": " Now, let us take an example in Dependent Events."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 233.0,
+      "end": 243.0,
+      "text": " Let us say that we have a bag of marbles."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 243.0,
+      "end": 245.0,
+      "text": " In this bag of marbles,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 245.0,
+      "end": 248.0,
+      "text": " let us say you have 3 red marbles."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 248.0,
+      "end": 252.0,
+      "text": " And you have 2 green marbles."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 252.0,
+      "end": 254.0,
+      "text": " Now, you have to calculate one thing."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 254.0,
+      "end": 256.0,
+      "text": " In the first event,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 256.0,
+      "end": 260.0,
+      "text": " in the first instance,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 260.6000061035156,
+      "end": 262.6000061035156,
+      "text": " in the first instance,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 262.6000061035156,
+      "end": 264.6000061035156,
+      "text": " I have picked up a marble."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 264.6000061035156,
+      "end": 266.6000061035156,
+      "text": " Let us say that we have to find probability of red marble."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 266.6000061035156,
+      "end": 268.6000061035156,
+      "text": " In this case,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 268.6000061035156,
+      "end": 270.6000061035156,
+      "text": " what is the probability of red marble?"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 270.6000061035156,
+      "end": 272.6000061035156,
+      "text": " Take out the formula of probability."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 272.6000061035156,
+      "end": 274.6000061035156,
+      "text": " It is 3 by 5."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 274.6000061035156,
+      "end": 276.6000061035156,
+      "text": " Total number of marbles is 5."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 276.6000061035156,
+      "end": 278.6000061035156,
+      "text": " If you want to find probability of red,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 278.6000061035156,
+      "end": 280.6000061035156,
+      "text": " you can write 3 by 5."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 280.6000061035156,
+      "end": 282.6000061035156,
+      "text": " Here, I will specifically write 3 by 5."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 282.6000061035156,
+      "end": 284.6000061035156,
+      "text": " You have easily understood this."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 284.6000061035156,
+      "end": 286.6000061035156,
+      "text": " In this case,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 286.6000061035156,
+      "end": 288.6000061035156,
+      "text": " my red marble is coming out."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 289.20001220703125,
+      "end": 291.20001220703125,
+      "text": " I will write it in red color."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 291.20001220703125,
+      "end": 293.20001220703125,
+      "text": " Here, my red marble is coming out."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 293.20001220703125,
+      "end": 295.20001220703125,
+      "text": " So, I have got 3 by 5."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 295.20001220703125,
+      "end": 297.20001220703125,
+      "text": " In the next event,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 297.20001220703125,
+      "end": 299.20001220703125,
+      "text": " after this event,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 299.20001220703125,
+      "end": 301.20001220703125,
+      "text": " let us say that I have to find probability of green marble."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 301.20001220703125,
+      "end": 303.20001220703125,
+      "text": " In the next event,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 303.20001220703125,
+      "end": 305.20001220703125,
+      "text": " let us say that my green marble is coming out."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 305.20001220703125,
+      "end": 307.20001220703125,
+      "text": " Now, in this case,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 307.20001220703125,
+      "end": 309.20001220703125,
+      "text": " what is the probability of green?"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 309.20001220703125,
+      "end": 311.20001220703125,
+      "text": " Just imagine."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 311.20001220703125,
+      "end": 313.20001220703125,
+      "text": " What is the probability of green?"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 313.20001220703125,
+      "end": 315.20001220703125,
+      "text": " When this red marble comes out,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 315.20001220703125,
+      "end": 317.20001220703125,
+      "text": " the total number of marbles remaining"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 317.79998779296875,
+      "end": 319.79998779296875,
+      "text": " will be 2 by 4."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 319.79998779296875,
+      "end": 321.79998779296875,
+      "text": " In this case,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 321.79998779296875,
+      "end": 323.79998779296875,
+      "text": " I will make a block"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 323.79998779296875,
+      "end": 325.79998779296875,
+      "text": " with remaining marbles."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 325.79998779296875,
+      "end": 327.79998779296875,
+      "text": " In this case,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 327.79998779296875,
+      "end": 329.79998779296875,
+      "text": " there will be 2 red marbles"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 329.79998779296875,
+      "end": 331.79998779296875,
+      "text": " and 2 green marbles."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 331.79998779296875,
+      "end": 333.79998779296875,
+      "text": " In this particular case,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 333.79998779296875,
+      "end": 335.79998779296875,
+      "text": " if you calculate probability of green marble"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 335.79998779296875,
+      "end": 337.79998779296875,
+      "text": " from this,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 337.79998779296875,
+      "end": 339.79998779296875,
+      "text": " you will get value 2 by 4."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 339.79998779296875,
+      "end": 341.79998779296875,
+      "text": " Here,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 341.79998779296875,
+      "end": 343.79998779296875,
+      "text": " the probabilities are changing."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 343.79998779296875,
+      "end": 345.79998779296875,
+      "text": " After this event,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 346.3999938964844,
+      "end": 348.3999938964844,
+      "text": " the probability is 2 by 4"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 348.3999938964844,
+      "end": 350.3999938964844,
+      "text": " which is less than 3 by 5."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 350.3999938964844,
+      "end": 352.3999938964844,
+      "text": " Here,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 352.3999938964844,
+      "end": 354.3999938964844,
+      "text": " this is called dependent event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 354.3999938964844,
+      "end": 356.3999938964844,
+      "text": " One event impacts another event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 356.3999938964844,
+      "end": 358.3999938964844,
+      "text": " This is the exact meaning"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 358.3999938964844,
+      "end": 360.3999938964844,
+      "text": " of dependent event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 360.3999938964844,
+      "end": 362.3999938964844,
+      "text": " It is very important to understand."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 362.3999938964844,
+      "end": 364.3999938964844,
+      "text": " If I make a formula,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 364.3999938964844,
+      "end": 366.3999938964844,
+      "text": " I will write a formula like this."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 366.3999938964844,
+      "end": 368.3999938964844,
+      "text": " Probability of red."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 368.3999938964844,
+      "end": 370.3999938964844,
+      "text": " Let us say that I have to find out"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 370.3999938964844,
+      "end": 372.3999938964844,
+      "text": " in these things"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 372.3999938964844,
+      "end": 374.3999938964844,
+      "text": " that if I want to find out"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 375.0,
+      "end": 377.0,
+      "text": " probability of red and"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 377.0,
+      "end": 379.0,
+      "text": " green."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 379.0,
+      "end": 381.0,
+      "text": " I am doing an experiment"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 381.0,
+      "end": 383.0,
+      "text": " where I am saying that"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 383.0,
+      "end": 385.0,
+      "text": " let us say that first time"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 385.0,
+      "end": 387.0,
+      "text": " we pick up red and green."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 387.0,
+      "end": 389.0,
+      "text": " What will be the probability of this experiment?"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 389.0,
+      "end": 391.0,
+      "text": " We will write the formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 391.0,
+      "end": 393.0,
+      "text": " like this."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 393.0,
+      "end": 395.0,
+      "text": " Probability of R and G."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 395.0,
+      "end": 397.0,
+      "text": " Probability of R means"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 397.0,
+      "end": 399.0,
+      "text": " red marble."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 399.0,
+      "end": 401.0,
+      "text": " After that, we have to find out G marble."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 401.0,
+      "end": 403.0,
+      "text": " What is the probability of these two events"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 403.6000061035156,
+      "end": 405.6000061035156,
+      "text": " How do we define this?"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 405.6000061035156,
+      "end": 407.6000061035156,
+      "text": " Probability of red multiplied by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 407.6000061035156,
+      "end": 409.6000061035156,
+      "text": " See, we are getting probability of red"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 409.6000061035156,
+      "end": 411.6000061035156,
+      "text": " for the first time."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 411.6000061035156,
+      "end": 413.6000061035156,
+      "text": " We are getting probability of red here."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 413.6000061035156,
+      "end": 415.6000061035156,
+      "text": " First event is going to be red."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 415.6000061035156,
+      "end": 417.6000061035156,
+      "text": " After that, we will write"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 417.6000061035156,
+      "end": 419.6000061035156,
+      "text": " Probability of green"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 419.6000061035156,
+      "end": 421.6000061035156,
+      "text": " given red."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 421.6000061035156,
+      "end": 423.6000061035156,
+      "text": " That is why I am updating here"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 423.6000061035156,
+      "end": 425.6000061035156,
+      "text": " because here it will not be probability of green."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 425.6000061035156,
+      "end": 427.6000061035156,
+      "text": " Probability of green"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 427.6000061035156,
+      "end": 429.6000061035156,
+      "text": " given red."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 429.6000061035156,
+      "end": 431.6000061035156,
+      "text": " Given red means"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 432.20001220703125,
+      "end": 434.20001220703125,
+      "text": " that event has happened."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 434.20001220703125,
+      "end": 436.20001220703125,
+      "text": " That is why I am writing it like this."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 436.20001220703125,
+      "end": 438.20001220703125,
+      "text": " We call this term"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 438.20001220703125,
+      "end": 440.20001220703125,
+      "text": " as conditional probability."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 440.20001220703125,
+      "end": 442.20001220703125,
+      "text": " This is a very important term."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 442.20001220703125,
+      "end": 444.20001220703125,
+      "text": " We will derive Bayes theorem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 444.20001220703125,
+      "end": 446.20001220703125,
+      "text": " from this."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 446.20001220703125,
+      "end": 448.20001220703125,
+      "text": " I hope you are able to understand."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 448.20001220703125,
+      "end": 450.20001220703125,
+      "text": " What I have written here is"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 450.20001220703125,
+      "end": 452.20001220703125,
+      "text": " probability of first event"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 452.20001220703125,
+      "end": 454.20001220703125,
+      "text": " when it is going to be red and then it is going to be green."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 454.20001220703125,
+      "end": 456.20001220703125,
+      "text": " First, we are going to pick up red marble"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 456.20001220703125,
+      "end": 458.20001220703125,
+      "text": " and then we are going to pick up green marble."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 458.20001220703125,
+      "end": 460.20001220703125,
+      "text": " What will be the probability of that?"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 460.79998779296875,
+      "end": 462.79998779296875,
+      "text": " This is our formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 462.79998779296875,
+      "end": 464.79998779296875,
+      "text": " with respect to"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 464.79998779296875,
+      "end": 466.79998779296875,
+      "text": " probability of red and green."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 466.79998779296875,
+      "end": 468.79998779296875,
+      "text": " Even now, we are discussing"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 468.79998779296875,
+      "end": 470.79998779296875,
+      "text": " only about dependent event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 470.79998779296875,
+      "end": 472.79998779296875,
+      "text": " We are discussing about dependent event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 472.79998779296875,
+      "end": 474.79998779296875,
+      "text": " Now,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 474.79998779296875,
+      "end": 476.79998779296875,
+      "text": " with this formula,"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 476.79998779296875,
+      "end": 478.79998779296875,
+      "text": " we will try to derive Bayes theorem."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 478.79998779296875,
+      "end": 480.79998779296875,
+      "text": " Let us write it again."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 480.79998779296875,
+      "end": 482.79998779296875,
+      "text": " I will write something else"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 482.79998779296875,
+      "end": 484.79998779296875,
+      "text": " in notation."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 484.79998779296875,
+      "end": 486.79998779296875,
+      "text": " If I write probability of A and B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 486.79998779296875,
+      "end": 488.79998779296875,
+      "text": " means"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 489.3999938964844,
+      "end": 491.3999938964844,
+      "text": " first A event and then B event"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 491.3999938964844,
+      "end": 493.3999938964844,
+      "text": " If I see the formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 493.3999938964844,
+      "end": 495.3999938964844,
+      "text": " then you will know"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 495.3999938964844,
+      "end": 497.3999938964844,
+      "text": " probability of A"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 497.3999938964844,
+      "end": 499.3999938964844,
+      "text": " multiplied by probability of B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 499.3999938964844,
+      "end": 501.3999938964844,
+      "text": " given A."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 501.3999938964844,
+      "end": 503.3999938964844,
+      "text": " I have written in the same notation."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 503.3999938964844,
+      "end": 505.3999938964844,
+      "text": " These two are almost same."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 505.3999938964844,
+      "end": 507.3999938964844,
+      "text": " Only the notation has changed."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 507.3999938964844,
+      "end": 509.3999938964844,
+      "text": " Everything else is same."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 509.3999938964844,
+      "end": 511.3999938964844,
+      "text": " Let me make some changes."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 511.3999938964844,
+      "end": 513.4000244140625,
+      "text": " If I write probability of A and B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 513.4000244140625,
+      "end": 515.4000244140625,
+      "text": " then"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 515.4000244140625,
+      "end": 517.4000244140625,
+      "text": " we can write probability of B and A"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 518.0,
+      "end": 520.0,
+      "text": " I hope"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 520.0,
+      "end": 522.0,
+      "text": " commutative properties are there."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 522.0,
+      "end": 524.0,
+      "text": " If you are not able to believe"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 524.0,
+      "end": 526.0,
+      "text": " then you can check the green one"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 526.0,
+      "end": 528.0,
+      "text": " and then check the red one."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 528.0,
+      "end": 530.0,
+      "text": " You will get the same answer."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 530.0,
+      "end": 532.0,
+      "text": " These two are always same."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 532.0,
+      "end": 534.0,
+      "text": " Probability of A and B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 534.0,
+      "end": 536.0,
+      "text": " is equal to probability of B and A."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 536.0,
+      "end": 538.0,
+      "text": " First B event and then A event"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 538.0,
+      "end": 540.0,
+      "text": " or first A event and then B event"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 540.0,
+      "end": 542.0,
+      "text": " are almost same."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 542.0,
+      "end": 544.0,
+      "text": " If I have to write the formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 544.0,
+      "end": 546.0,
+      "text": " then this formula will be"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 546.5999755859375,
+      "end": 548.5999755859375,
+      "text": " probability of B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 548.5999755859375,
+      "end": 550.5999755859375,
+      "text": " given A"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 550.5999755859375,
+      "end": 552.5999755859375,
+      "text": " multiplied by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 552.5999755859375,
+      "end": 554.5999755859375,
+      "text": " probability of B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 554.5999755859375,
+      "end": 556.5999755859375,
+      "text": " multiplied by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 556.5999755859375,
+      "end": 558.5999755859375,
+      "text": " probability of A"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 558.5999755859375,
+      "end": 560.5999755859375,
+      "text": " given B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 560.5999755859375,
+      "end": 562.5999755859375,
+      "text": " You have got the answer."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 562.5999755859375,
+      "end": 564.5999755859375,
+      "text": " First B event and then A event."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 564.5999755859375,
+      "end": 566.5999755859375,
+      "text": " That is why I have written"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 566.5999755859375,
+      "end": 568.5999755859375,
+      "text": " probability of B multiplied by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 568.5999755859375,
+      "end": 570.5999755859375,
+      "text": " probability of A given B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 570.5999755859375,
+      "end": 572.5999755859375,
+      "text": " Now I can write"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 572.5999755859375,
+      "end": 574.5999755859375,
+      "text": " probability of B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 575.2000122070312,
+      "end": 577.2000122070312,
+      "text": " multiplied by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 577.2000122070312,
+      "end": 579.2000122070312,
+      "text": " probability of A"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 579.2000122070312,
+      "end": 581.2000122070312,
+      "text": " given B"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 581.2000122070312,
+      "end": 583.2000122070312,
+      "text": " divided by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 583.2000122070312,
+      "end": 585.2000122070312,
+      "text": " probability of A"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 585.2000122070312,
+      "end": 587.2000122070312,
+      "text": " This theorem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 587.2000122070312,
+      "end": 589.2000122070312,
+      "text": " is called Bayes' theorem."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 589.2000122070312,
+      "end": 591.2000122070312,
+      "text": " This Bayes' theorem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 591.2000122070312,
+      "end": 593.2000122070312,
+      "text": " is extensively used"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 593.2000122070312,
+      "end": 595.2000122070312,
+      "text": " in Naive Bayes."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 595.2000122070312,
+      "end": 597.2000122070312,
+      "text": " This Bayes' theorem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 597.2000122070312,
+      "end": 599.2000122070312,
+      "text": " is used extensively"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 599.2000122070312,
+      "end": 601.2000122070312,
+      "text": " in Naive Bayes."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 601.2000122070312,
+      "end": 603.2000122070312,
+      "text": " This Bayes' theorem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 603.7999877929688,
+      "end": 605.7999877929688,
+      "text": " is called"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 605.7999877929688,
+      "end": 607.7999877929688,
+      "text": " Bayes' theorem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 607.7999877929688,
+      "end": 609.7999877929688,
+      "text": " in Naive Bayes."
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 663.7000122070312,
+      "end": 673.0999755859375,
+      "text": " Okay, speaking hindi"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 673.0999755859375,
+      "end": 674.6799926757812,
+      "text": " So 3 independent"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 674.6799926757812,
+      "end": 677.1799926757812,
+      "text": " features and 1 dependent feature"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 677.1799926757812,
+      "end": 679.1599731445312,
+      "text": " Now this formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 679.1599731445312,
+      "end": 681.4400024414062,
+      "text": " how it is applied, let me show"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 681.4400024414062,
+      "end": 683.4400024414062,
+      "text": " so, I'm writing again"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 683.4400024414062,
+      "end": 685.4400024414062,
+      "text": " The first one is b"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 685.4400024414062,
+      "end": 687.4400024414062,
+      "text": " So I'm writing probability"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 687.4400024414062,
+      "end": 689.4400024414062,
+      "text": " I will write in different color"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 689.4400024414062,
+      "end": 691.4400024414062,
+      "text": " probability of b"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 691.4400024414062,
+      "end": 693.4400024414062,
+      "text": " instead of b"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 693.4400024414062,
+      "end": 695.4400024414062,
+      "text": " we will take y from here"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 695.4400024414062,
+      "end": 697.4400024414062,
+      "text": " because when we train a model"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 697.4400024414062,
+      "end": 699.4400024414062,
+      "text": " we will give x1, x2, x3"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 699.4400024414062,
+      "end": 701.4400024414062,
+      "text": " and according to that we have to find the value of y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 701.4400024414062,
+      "end": 703.4400024414062,
+      "text": " So here we will write"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 703.4400024414062,
+      "end": 705.4400024414062,
+      "text": " Probability of y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 705.4400024414062,
+      "end": 707.4400024414062,
+      "text": " given, very important"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 707.4400024414062,
+      "end": 709.4400024414062,
+      "text": " given"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 709.4400024414062,
+      "end": 711.4400024414062,
+      "text": " x1, x2, x3"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 711.4400024414062,
+      "end": 713.4400024414062,
+      "text": " Okay"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 713.4400024414062,
+      "end": 715.4400024414062,
+      "text": " So here your a"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 715.4400024414062,
+      "end": 717.4400024414062,
+      "text": " a value will be your independent feature"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 717.4400024414062,
+      "end": 719.4400024414062,
+      "text": " All this is your a"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 719.4400024414062,
+      "end": 721.4400024414062,
+      "text": " Okay"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 721.4400024414062,
+      "end": 723.4400024414062,
+      "text": " This is your b"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 723.4400024414062,
+      "end": 725.4400024414062,
+      "text": " Very important thing to understand"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 725.4400024414062,
+      "end": 727.4400024414062,
+      "text": " You will get a very good understanding"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 727.4400024414062,
+      "end": 729.4400024414062,
+      "text": " Okay"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 729.4400024414062,
+      "end": 731.4400024414062,
+      "text": " Let me rub these two lines"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 731.4400024414062,
+      "end": 733.4400024414062,
+      "text": " I hope you understood"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 733.4400024414062,
+      "end": 735.4400024414062,
+      "text": " Is equal to"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 735.4400024414062,
+      "end": 737.4400024414062,
+      "text": " So here I will first write probability of b"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 737.4400024414062,
+      "end": 739.4400024414062,
+      "text": " Probability of b is"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 739.4400024414062,
+      "end": 741.4400024414062,
+      "text": " your b will be y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 741.4400024414062,
+      "end": 743.4400024414062,
+      "text": " So here I wrote y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 743.4400024414062,
+      "end": 745.4400024414062,
+      "text": " Multiplied by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 745.4400024414062,
+      "end": 747.4400024414062,
+      "text": " Probability of a"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 747.4400024414062,
+      "end": 749.4400024414062,
+      "text": " We can write a as"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 749.4400024414062,
+      "end": 751.4400024414062,
+      "text": " x1, x2, x3"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 751.4400024414062,
+      "end": 753.4400024414062,
+      "text": " given y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 753.4400024414062,
+      "end": 755.4400024414062,
+      "text": " Okay"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 755.4400024414062,
+      "end": 757.4400024414062,
+      "text": " b is y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 757.4400024414062,
+      "end": 759.4400024414062,
+      "text": " Divided by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 759.4400024414062,
+      "end": 761.4400024414062,
+      "text": " Probability of"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 761.4400024414062,
+      "end": 763.4400024414062,
+      "text": " x1, x2, x3"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 763.4400024414062,
+      "end": 765.4400024414062,
+      "text": " So this will be"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 765.4400024414062,
+      "end": 767.4400024414062,
+      "text": " your complete formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 767.4400024414062,
+      "end": 769.4400024414062,
+      "text": " Okay"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 769.4400024414062,
+      "end": 771.4400024414062,
+      "text": " And this thing will be applied"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 771.4400024414062,
+      "end": 773.4400024414062,
+      "text": " in all machine learning algorithms"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 773.4400024414062,
+      "end": 775.4400024414062,
+      "text": " And from this we will basically"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 775.4400024414062,
+      "end": 777.4400024414062,
+      "text": " find Probability of y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 777.4400024414062,
+      "end": 779.4400024414062,
+      "text": " In a very simple way"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 779.4400024414062,
+      "end": 781.4400024414062,
+      "text": " In a very simple way"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 781.4400024414062,
+      "end": 783.4400024414062,
+      "text": " And"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 783.4400024414062,
+      "end": 785.4400024414062,
+      "text": " Always remember"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 785.4400024414062,
+      "end": 787.4400024414062,
+      "text": " Whatever values are there"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 787.4400024414062,
+      "end": 789.4400024414062,
+      "text": " According to the training data set"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 789.4400024414062,
+      "end": 791.4400024414062,
+      "text": " The whole formula is trained"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 791.4400024414062,
+      "end": 793.4400024414062,
+      "text": " So what you can see here"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 793.4400024414062,
+      "end": 795.4400024414062,
+      "text": " If I want to predict"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 795.4400024414062,
+      "end": 797.4400024414062,
+      "text": " the y of any data set"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 797.4400024414062,
+      "end": 799.4400024414062,
+      "text": " So what I will do"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 799.4400024414062,
+      "end": 801.4400024414062,
+      "text": " I will just apply this formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 801.4400024414062,
+      "end": 803.4400024414062,
+      "text": " Probability of y multiplied by"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 803.4400024414062,
+      "end": 805.4400024414062,
+      "text": " x1, x2, x3"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 805.4400024414062,
+      "end": 807.4400024414062,
+      "text": " given y"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 807.4400024414062,
+      "end": 809.4400024414062,
+      "text": " Divided by Probability of x1, x2, x3"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 809.4400024414062,
+      "end": 811.4400024414062,
+      "text": " Okay"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 811.4400024414062,
+      "end": 813.4400024414062,
+      "text": " So this formula is used"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 813.4400024414062,
+      "end": 815.4400024414062,
+      "text": " in the whole machine learning algorithm"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 815.4400024414062,
+      "end": 817.4400024414062,
+      "text": " training plus predicting"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 817.4400024414062,
+      "end": 819.4400024414062,
+      "text": " You may still be in confusion"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 819.4400024414062,
+      "end": 821.4400024414062,
+      "text": " Krish, show some examples for this"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 821.4400024414062,
+      "end": 823.4400024414062,
+      "text": " See, this video has become very long"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 823.4400024414062,
+      "end": 825.4400024414062,
+      "text": " I will show the same example"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 825.4400024414062,
+      "end": 827.4400024414062,
+      "text": " with the same formula"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 827.4400024414062,
+      "end": 829.4400024414062,
+      "text": " I will show the next example"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 829.4400024414062,
+      "end": 831.4400024414062,
+      "text": " In that example, we will take a data set"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 831.4400024414062,
+      "end": 833.4400024414062,
+      "text": " We will solve a practical problem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 833.4400024414062,
+      "end": 835.4400024414062,
+      "text": " I promise that"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 835.4400024414062,
+      "end": 837.4400024414062,
+      "text": " In the next video, which will be part 2"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 837.4400024414062,
+      "end": 839.4400024414062,
+      "text": " We will solve a practical problem"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 839.4400024414062,
+      "end": 841.4400024414062,
+      "text": " I hope you liked this video"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 841.4400024414062,
+      "end": 843.4400024414062,
+      "text": " Make sure to subscribe"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 843.4400024414062,
+      "end": 845.4400024414062,
+      "text": " to the channel"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 845.4400024414062,
+      "end": 847.4400024414062,
+      "text": " Press the bell notification icon"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 847.4400024414062,
+      "end": 849.4400024414062,
+      "text": " Share it with your friends"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 849.4400024414062,
+      "end": 851.4400024414062,
+      "text": " Because I am teaching in Hindi"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 851.4400024414062,
+      "end": 853.4400024414062,
+      "text": " And it will definitely be useful to many people"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 853.4400024414062,
+      "end": 855.4400024414062,
+      "text": " If they get to know"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 855.4400024414062,
+      "end": 857.4400024414062,
+      "text": " So initially push"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 857.4400024414062,
+      "end": 859.4400024414062,
+      "text": " And share it to everyone"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 859.4400024414062,
+      "end": 861.4400024414062,
+      "text": " I will see you in the next video"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 861.4400024414062,
+      "end": 863.4400024414062,
+      "text": " Have a great day"
+    },
+    {
+      "number": "NA",
+      "title": "Naive Bayes",
+      "start": 863.4400024414062,
+      "end": 865.4400024414062,
+      "text": " Thank you"
+    }
+  ]
+}

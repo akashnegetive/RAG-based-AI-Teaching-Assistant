@@ -1,0 +1,14 @@
+ I am teaching Machine learning using Krish Naik ML course.Here are video subtitle chunks with their video titles,video number,text at that time,start and end time stamps in seconds and I have the following video chunks data:
+
+[{"title":"K Nearest Neighbour","number":"6","start":837.12,"end":839.12,"text":" What are the limitations of KNN?"},{"title":"K Nearest Neighbour","number":"6","start":843.12,"end":845.12,"text":" So, what will be the limitation of KNN?"},{"title":"K Nearest Neighbour","number":"6","start":288.12,"end":299.12,"text":" So, what mechanism does KNN use to find out that in which category the new test data point falls based on this training dataset."},{"title":"K Nearest Neighbour","number":"6","start":302.12,"end":308.12,"text":" KNN finds out a K value."},{"title":"Support Vector Machine","number":"8","start":994.2,"end":996.2,"text":" here we will write constraint"}]
+
+
+
+-------------------------------------------------
+Now, answer the question based on the above video chunks data.
+
+Question:"where is knn limitation taught"
+
+User asked the this question realted to the video chunks,you have to answer in human way(dont mention in above format its only for you)where and how much content is taught  in which video. and at what time stamp. and guide the user to that part of the video.
+If you are unable to find the answer, simply state that you don't know and tell him to ask question related to the video content only.
+

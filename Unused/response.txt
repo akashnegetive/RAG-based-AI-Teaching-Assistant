@@ -1,0 +1,7 @@
+Based on the provided video chunks data, it appears that the limitation of KNN is discussed in two different videos. 
+
+The first part where KNN's limitations are talked about (although not explicitly stated) is in Video 6 at start time: 837.12 seconds and end time: 839.12 seconds. At this point, there seems to be some confusion with the video content; however, we can't find any information on what is being discussed.
+
+However, when discussing KNN more directly in Video 6 at start time: 843.12 seconds and end time: 845.12 seconds, it is stated that "So, what will be the limitation of KNN?" This part of the video appears to delve deeper into a specific aspect of the limitations of the algorithm.
+
+For learning where exactly this part occurs, please look for Video 6 at start time: 843.12 seconds and end time: 845.12 seconds.
