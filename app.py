@@ -25,6 +25,17 @@ from reportlab.lib.styles import getSampleStyleSheet
 
 load_dotenv()
 
+BASE_DATA_DIR = os.path.join(os.path.expanduser("~"), "rag_data")
+
+VIDEOS_DIR = os.path.join(BASE_DATA_DIR, "videos")
+AUDIOS_DIR = os.path.join(BASE_DATA_DIR, "audios")
+JSONS_DIR  = os.path.join(BASE_DATA_DIR, "jsons")
+
+os.makedirs(VIDEOS_DIR, exist_ok=True)
+os.makedirs(AUDIOS_DIR, exist_ok=True)
+os.makedirs(JSONS_DIR, exist_ok=True)
+
+
 client = OpenAI(api_key=os.getenv("api_key"))
 
 st.set_page_config(page_title="RAG Video Assistant", layout="wide")
@@ -208,9 +219,10 @@ def delete_lecture(title):
     collection.delete(where={"title": title})
 
     # 2. Delete media files
-    video_path = os.path.join("videos", title + ".mp4")
-    audio_path = os.path.join("audios", title + ".mp3")
-    json_path = os.path.join("jsons", title + ".json")
+    video_path = os.path.join(VIDEOS_DIR, title + ".mp4")
+    audio_path = os.path.join(AUDIOS_DIR, title + ".mp3")
+    json_path  = os.path.join(JSONS_DIR, title + ".json")
+
 
     for path in [video_path, audio_path, json_path]:
         if os.path.exists(path):
@@ -222,7 +234,7 @@ def delete_lecture(title):
     st.rerun()
 
 def reindex_lecture(title):
-    json_path = os.path.join("jsons", title + ".json")
+    json_path = os.path.join(JSONS_DIR, title + ".json")
 
     # First delete old vectors
     collection.delete(where={"title": title})
@@ -275,7 +287,7 @@ def inference(prompt):
 def download_youtube_video(url):
     ydl_opts = {
         "format": "bestvideo+bestaudio/best",
-        "outtmpl": "videos/%(id)s.%(ext)s",   # use video ID, not title
+        "outtmpl": os.path.join(VIDEOS_DIR, "%(id)s.%(ext)s"),
         "merge_output_format": "mp4",
         "quiet": True
     }
@@ -283,7 +295,8 @@ def download_youtube_video(url):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
         video_id = info["id"]
-        return f"videos/{video_id}.mp4"
+        return os.path.join(VIDEOS_DIR, f"{video_id}.mp4")
+
 
 
 # ============================================================
@@ -388,7 +401,7 @@ def process_audio(audio_path):
 
 def get_video_catalog():
     """Read all video files and clean names for UI."""
-    videos = os.listdir("videos")
+    videos = os.listdir(VIDEOS_DIR)
     catalog = []
     for v in videos:
         name = os.path.splitext(v)[0]
@@ -645,7 +658,7 @@ with st.sidebar:
             st.error(f"⚠️ Lecture '{title}' already exists in the knowledge base.")
             st.stop()
 
-        save_path = os.path.join("videos", uploaded_video.name)
+        save_path = os.path.join(VIDEOS_DIR, uploaded_video.name)
         with open(save_path, "wb") as f:
             f.write(uploaded_video.getbuffer())
 
@@ -683,7 +696,7 @@ with st.sidebar:
             st.error(f"⚠️ Lecture '{title}' already exists in the knowledge base.")
             st.stop()
 
-        save_path = os.path.join("audios", uploaded_audio.name)
+        save_path = os.path.join(AUDIOS_DIR, uploaded_audio.name)
         with open(save_path, "wb") as f:
             f.write(uploaded_audio.getbuffer())
 
@@ -726,8 +739,9 @@ with st.sidebar:
     embedded_titles = sorted(set(m["title"] for m in all_meta["metadatas"]))
 
     
-    video_files = os.listdir("videos")
-    audio_files = os.listdir("audios")
+    video_files = os.listdir(VIDEOS_DIR)
+    audio_files = os.listdir(AUDIOS_DIR)
+
     
     video_titles = {os.path.splitext(v)[0] for v in video_files}
     audio_titles = {os.path.splitext(a)[0] for a in audio_files}
@@ -1240,8 +1254,9 @@ if ask_btn and query.strip():
     video_file = best_chunk["title"] + ".mp4"
     audio_file = best_chunk["title"] + ".mp3"
 
-    video_path = os.path.join("videos", video_file)
-    audio_path = os.path.join("audios", audio_file)
+    video_path = os.path.join(VIDEOS_DIR, video_file)
+    audio_path = os.path.join(AUDIOS_DIR, audio_file)
+
 
     if os.path.exists(video_path):
         st.markdown("""
