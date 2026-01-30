@@ -36,7 +36,7 @@ os.makedirs(AUDIOS_DIR, exist_ok=True)
 os.makedirs(JSONS_DIR, exist_ok=True)
 
 
-client = OpenAI(api_key=os.getenv("api_key"))
+client = OpenAI()
 
 st.set_page_config(page_title="RAG Video Assistant", layout="wide")
 
