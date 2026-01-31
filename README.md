@@ -136,7 +136,7 @@ streamlit run app.py
 - Chunks → vector embeddings (OpenAI `text-embedding-3-large`)  
 - Embeddings → stored in ChromaDB  
 
----
+
 
 ### 🔹 Question Answering Flow
 
@@ -146,7 +146,6 @@ streamlit run app.py
 - GPT-5 grounded answer generation  
 - Timestamp references returned with synchronized video/audio playback  
 
----
 
 ### 🔹 Lecture Summarization
 
