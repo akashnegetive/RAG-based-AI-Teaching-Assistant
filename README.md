@@ -83,6 +83,34 @@ Users can:
 - ReportLab (PDF generation)
 
 ---
+## Website Link   [🔗](https://rag-based-ai-teaching-akash.streamlit.app/)
+
+### 1) Main Page
+  
+ <img width="1845" height="817" alt="image" src="https://github.com/user-attachments/assets/e694bd24-a67c-46ef-8f63-862599692df9" />
+  
+### 2) Media Inputs
+ 
+  <img width="358" height="815" alt="image" src="https://github.com/user-attachments/assets/6415db94-d49f-4743-a4fe-c1a79afc255a" />
+
+### 3) Scoped Filtering & Lecture Management (Delete + Re-index )
+  
+<img width="371" height="778" alt="image" src="https://github.com/user-attachments/assets/38d118a2-923c-4531-a4bc-c909dcedecca" />
+
+### 4) Summariztaion & Pdf Export
+  
+<img width="1475" height="688" alt="image" src="https://github.com/user-attachments/assets/ce540447-fe8d-45fc-8fd9-fe074e072cca" />
+
+### 5) Question Answering Using LLM (Chatgpt-5)
+  
+<img width="1582" height="788" alt="image" src="https://github.com/user-attachments/assets/ca61e051-577f-451a-8db4-60e8cc2ff70b" />
+
+### 6) Exact Timestamp with Media Playback
+
+<img width="1290" height="243" alt="image" src="https://github.com/user-attachments/assets/a9099866-f207-4cc9-82ce-0d4f7d59da0a" />
+<img width="1141" height="727" alt="image" src="https://github.com/user-attachments/assets/e7eaa242-6c45-4ca1-80a3-572d6d9eab9a" />
+
+---
 
 ## ⚙️ Setup & Installation
 
