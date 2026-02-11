@@ -97,7 +97,7 @@ Users can:
   
 <img width="371" height="778" alt="image" src="https://github.com/user-attachments/assets/38d118a2-923c-4531-a4bc-c909dcedecca" />
 
-### 4) Summariztaion & Pdf Export
+### 4) Summarization & Pdf Export
   
 <img width="1475" height="688" alt="image" src="https://github.com/user-attachments/assets/ce540447-fe8d-45fc-8fd9-fe074e072cca" />
 
