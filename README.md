@@ -1,224 +1,125 @@
-# 🎓 RAG-Based AI Teaching Assistant
+# 🎓 RAG-based AI Teaching Assistant (v2)
 
-🚀 **Live App**  
-https://rag-based-ai-teaching-akash.streamlit.app/
+Ask questions about lecture recordings and get grounded answers with exact timestamps.
+Upload video/audio or paste a YouTube link → Whisper transcription → timestamp-aware chunking →
+hybrid retrieval (dense + BM25) → reranking → GPT-5 answer with inline citations → jump-to-timestamp playback.
 
----
+## What changed in v2
 
-## 🚀 Overview
+| Area | v1 | v2 |
+|---|---|---|
+| Chunking | raw Whisper segments (2–8 s) | merged ~45 s windows with 10 s overlap |
+| Retrieval | dense top-5 | dense + BM25 → reciprocal-rank fusion → reranker → top-5 |
+| Unanswerable questions | always answered | relevance threshold; says "not in the lectures" |
+| Citations | top-1 timestamp only | every source shown with timestamp, score, and player |
+| Transcription | `translations` (forced English), 25 MB limit | `transcriptions`, auto-split of long audio |
+| Summaries | full transcript in one prompt, regenerated every click | map-reduce for long lectures, cached on disk |
+| Code | one 1,300-line `app.py` | `rag_ta/` package, thin UI, typed models, config via env |
+| Quality | — | 23 unit tests, RAGAS eval harness, ruff, GitHub Actions, Docker |
 
-This project builds an end-to-end **Retrieval-Augmented Generation (RAG)** system for lecture understanding and study assistance.  
-It enables users to upload or import lectures, perform semantic search with timestamp grounding, generate structured summaries, and navigate lectures at a concept level.
-
-The platform is designed for **real-world academic and enterprise knowledge-assistant use cases**.
-
-Users can:
-
-- Upload or import lecture videos and audio (including YouTube)
-- Automatically transcribe and chunk lectures with timestamps
-- Store embeddings in a vector database
-- Ask natural-language questions
-- Retrieve answers with exact lecture timestamps
-- Generate full lecture summaries and study notes
-- Export summaries as PDFs
-- Navigate lectures using concept-level indexing
-
----
-
-## ✨ Key Features
-
-- 🔍 **Timestamp-grounded semantic Q&A**
-- 📚 **Lecture-level scoped search**
-- 🧠 **Full lecture summarization**
-  - Quick summary (1–2 min read)
-  - Detailed study notes
-- 📑 **PDF export for summaries**
-- 🧭 **Concept index / chapter navigation**
-- 🎥 **Synchronized video & audio playback**
-- 🗂️ **Lecture lifecycle management**
-  - Upload
-  - Delete
-  - Re-index
-- ▶️ **Multimodal ingestion**
-  - Video
-  - Audio
-  - YouTube links
-
----
-
-## 🏗️ System Architecture
-   - Video / Audio / YouTube
-   -  FFmpeg
-   - Whisper ASR
- - Timestamped JSON
- -  Chunking + Metadata
-- OpenAI Embeddings (text-embedding-3-large)
--   ChromaDB
-- Semantic Retrieval + Filters
-- GPT-5 Inference
-- UI + Playback + PDF Export
-
-
----
-
-## 🧰 Tech Stack
-
-### Core
-- Python
-- Streamlit
-- ChromaDB
-
-### AI & LLM
-- OpenAI GPT-5
-- OpenAI `text-embedding-3-large`
-
-### Speech & Media
-- FFmpeg
-- Whisper (ASR)
-
-### Ingestion
-- yt-dlp (YouTube ingestion)
-
-### Document Export
-- ReportLab (PDF generation)
-
----
-## Website Link   [🔗](https://rag-based-ai-teaching-akash.streamlit.app/)
-
-### 1) Main Page
-  
- <img width="1845" height="817" alt="image" src="https://github.com/user-attachments/assets/e694bd24-a67c-46ef-8f63-862599692df9" />
-  
-### 2) Media Inputs
- 
-  <img width="358" height="815" alt="image" src="https://github.com/user-attachments/assets/6415db94-d49f-4743-a4fe-c1a79afc255a" />
-
-### 3) Scoped Filtering & Lecture Management (Delete + Re-index )
-  
-<img width="371" height="778" alt="image" src="https://github.com/user-attachments/assets/38d118a2-923c-4531-a4bc-c909dcedecca" />
-
-### 4) Summarization & Pdf Export
-  
-<img width="1475" height="688" alt="image" src="https://github.com/user-attachments/assets/ce540447-fe8d-45fc-8fd9-fe074e072cca" />
-
-### 5) Question Answering Using LLM (Chatgpt-5)
-  
-<img width="1582" height="788" alt="image" src="https://github.com/user-attachments/assets/ca61e051-577f-451a-8db4-60e8cc2ff70b" />
-
-### 6) Exact Timestamp with Media Playback
-
-<img width="1290" height="243" alt="image" src="https://github.com/user-attachments/assets/a9099866-f207-4cc9-82ce-0d4f7d59da0a" />
-<img width="1141" height="727" alt="image" src="https://github.com/user-attachments/assets/e7eaa242-6c45-4ca1-80a3-572d6d9eab9a" />
-
----
-
-## ⚙️ Setup & Installation
-
-### 1️⃣ Clone the repository
+## Quick start
 
 ```bash
-git clone https://github.com/akashnegetive/RAG-based-AI-Teaching-Assistant.git
-cd RAG-based-AI-Teaching-Assistant
-```
-
-### 2️⃣ Create virtual environment
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### 3️⃣ Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4️⃣ Configure environment variables
-
-Create a .env file:
-```bash
-api_key=YOUR_OPENAI_API_KEY
-```
-### 5️⃣ Run the application
-
-```bash
+git clone <repo> && cd <repo>
+pip install -r requirements.txt          # needs ffmpeg on PATH
+cp .env.example .env                     # add OPENAI_API_KEY
 streamlit run app.py
-
 ```
 
-### 📥 Supported Inputs
-- Local video files (MP4)
-- Local audio files (MP3 / WAV)
-- YouTube lecture URLs
+Docker:
 
----
+```bash
+cp .env.example .env && docker compose up --build   # http://localhost:8501
+```
 
-## 📖 How It Works
+## Architecture
 
-### 🔹 Lecture Ingestion Pipeline
+```
+rag_ta/
+├── config.py            # all tunables, overridable via RAG_* env vars
+├── models.py            # Segment, Chunk, RetrievedChunk
+├── store.py             # Chroma persistent client
+├── ingestion/
+│   ├── media.py         # ffmpeg: extract audio, split long files
+│   ├── transcribe.py    # Whisper with timestamp offsets across splits
+│   ├── chunking.py      # timestamp-aware merge + overlap
+│   └── indexer.py       # ingest_video / ingest_audio / reindex / delete
+├── retrieval/
+│   ├── embeddings.py    # OpenAI embeddings, batched
+│   ├── sparse.py        # BM25 index over the same chunks
+│   ├── fusion.py        # reciprocal rank fusion
+│   ├── rerank.py        # LLM / FlashRank / none
+│   └── retriever.py     # HybridRetriever orchestration
+└── llm/
+    ├── client.py        # OpenAI client with timeout + retries
+    ├── prompts.py       # all prompts, versioned in one place
+    ├── answer.py        # grounded answer with [S#] citations
+    └── summarize.py     # map-reduce summaries + cache
+app.py                   # Streamlit UI
+tests/                   # pytest, no API key needed
+eval/run_eval.py         # RAGAS: faithfulness, answer relevancy, context precision/recall
+```
 
-- Video → audio extraction (FFmpeg)  
-- Audio → timestamped transcript (Whisper ASR)  
-- Transcript → chunks + structured metadata  
-- Chunks → vector embeddings (OpenAI `text-embedding-3-large`)  
-- Embeddings → stored in ChromaDB  
+### Retrieval pipeline
 
+```
+query ──► embed ──► Chroma top-20 ─┐
+                                   ├─► RRF (k=60) ─► top-15 ─► reranker ─► top-5 ─► threshold ─► LLM
+query ──► BM25  ──► top-20 ────────┘
+```
 
+* **Why hybrid?** Embeddings handle paraphrase ("penalty that zeroes weights" → lasso); BM25 handles exact
+  tokens ("Kadane", "L2", variable names). RRF merges them without score normalisation.
+* **Why rerank?** A cross-encoder / LLM judge reads query and passage *together*, which is far more accurate
+  than cosine similarity but too slow for the full corpus — so it runs on ~15 candidates only.
+* **Threshold:** if the best reranked score is below `RAG_MIN_RELEVANCE`, the assistant says the answer isn't
+  in the indexed lectures instead of hallucinating.
 
-### 🔹 Question Answering Flow
+Reranker backends (`RAG_RERANKER`): `llm` (default, no extra deps), `flashrank` (local ONNX cross-encoder,
+`pip install -r requirements-optional.txt`), `none`.
 
-- User query → query embedding  
-- Vector similarity search over ChromaDB  
-- Optional lecture-scoped filtering  
-- GPT-5 grounded answer generation  
-- Timestamp references returned with synchronized video/audio playback  
+## Configuration
 
+Every knob is an env var — see `.env.example`. Common ones:
 
-### 🔹 Lecture Summarization
+| Var | Default | Notes |
+|---|---|---|
+| `RAG_CHAT_MODEL` | `gpt-5` | |
+| `RAG_EMBEDDING_MODEL` | `text-embedding-3-large` | changing this requires re-indexing |
+| `RAG_WHISPER_LANGUAGE` | *(auto)* | `hi`, `en`, … |
+| `RAG_CHUNK_SECONDS` / `RAG_CHUNK_OVERLAP` | `45` / `10` | re-index after changing |
+| `RAG_FINAL_TOP_K` | `5` | |
+| `RAG_MIN_RELEVANCE` | `0.15` | 0–1 |
+| `RAG_RERANKER` | `llm` | `llm` \| `flashrank` \| `none` |
 
-- Entire lecture transcript is loaded
-- Two parallel summarization pipelines are generated:
-  - ⚡ Quick Summary (1–2 min read)
-  - 📚 Detailed Notes (full study notes)
-- Both summaries can be exported as PDF
+## Evaluation
 
----
+```bash
+pip install -r requirements-eval.txt
+cp eval/dataset.example.jsonl eval/dataset.jsonl   # add your own Q/A pairs
+python -m eval.run_eval --dataset eval/dataset.jsonl
+```
 
-## 📑 PDF Export
+Prints faithfulness, answer relevancy, context precision, context recall and latency; saves a JSON under
+`eval/results/` with the config used. Run before and after any retrieval or prompt change.
 
-The system generates downloadable PDFs for:
+## Development
 
-- Quick lecture summary  
-- Detailed study notes  
+```bash
+pip install -r requirements-dev.txt
+make test    # pytest (fakes for OpenAI; real Chroma in a temp dir)
+make lint    # ruff
+```
 
-PDFs are generated fully in memory and streamed directly to the user  
-(no persistent server storage is required).
+CI runs lint + tests on Python 3.11/3.12 and builds the Docker image on every push and PR.
 
----
+## Migrating from v1
 
-## 🧭 Concept Index (Chapter Navigation)
+Old `jsons/*.json` transcripts are still readable. Re-index them with the new chunker:
 
-The system automatically extracts structured lecture segments and builds a lightweight concept index that enables:
+```bash
+python scripts/migrate_old_jsons.py path/to/old/jsons
+```
 
-- Viewing the major topics covered in a lecture  
-- Jumping directly to the corresponding timestamps in the video player  
-
----
-
-## 👤 Author
-
-**Akash Gupta**
-
-**Project:**  
-RAG-Based AI Teaching Assistant  
-
-🔗 GitHub: https://github.com/akashnegetive/RAG-based-AI-Teaching-Assistant
-
-
-This provides a Coursera / Udemy-style chapter navigation experience.
-
-
-
-
-
+Media files, the Chroma store, and transcripts now live under `RAG_DATA_DIR` (default `~/rag_data`) and are
+git-ignored — don't commit them.

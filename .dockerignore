@@ -1,0 +1,12 @@
+.git
+.env
+__pycache__
+*.pyc
+rag_data
+chroma_store
+videos
+audios
+jsons
+eval/results
+tests
+Unused
