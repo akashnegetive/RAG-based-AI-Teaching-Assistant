@@ -34,10 +34,12 @@ def _transcribe_file(path: Path, offset: float, cfg: Settings) -> list[Segment]:
     segs = getattr(resp, "segments", None) or []
     out = []
     for s in segs:
-        start = float(getattr(s, "start", s["start"]))
-        end = float(getattr(s, "end", s["end"]))
-        text = getattr(s, "text", None) if not isinstance(s, dict) else s["text"]
-        out.append(Segment(start=start + offset, end=end + offset, text=(text or "").strip()))
+        # The SDK returns TranscriptionSegment objects; older/raw responses give plain dicts.
+        get = s.get if isinstance(s, dict) else lambda k, _s=s: getattr(_s, k, None)
+        start, end, text = get("start"), get("end"), get("text")
+        if start is None or end is None:
+            continue
+        out.append(Segment(start=float(start) + offset, end=float(end) + offset, text=(text or "").strip()))
     return out
 
 
