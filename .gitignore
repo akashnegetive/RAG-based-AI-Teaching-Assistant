@@ -13,3 +13,5 @@ eval/results/
 eval/dataset.jsonl
 *.mp4
 *.mp3
+
+.venv/

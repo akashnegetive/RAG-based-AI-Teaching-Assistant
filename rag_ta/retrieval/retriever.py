@@ -78,7 +78,7 @@ class HybridRetriever:
                 RetrievedChunk(
                     id=doc_id,
                     title=meta["title"],
-                    index=int(meta.get("index", meta.get("number", 0)) or 0),
+                    index=int(meta.get("index", meta.get("number", 0)) or 0) if str(meta.get("index", meta.get("number", 0))).isdigit() else 0,
                     start=float(meta["start"]),
                     end=float(meta["end"]),
                     text=doc,

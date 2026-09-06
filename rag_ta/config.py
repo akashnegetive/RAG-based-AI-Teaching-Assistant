@@ -46,6 +46,7 @@ class Settings:
     rerank_top_k: int = field(default_factory=lambda: _env_int("RAG_RERANK_TOP_K", 15))
     final_top_k: int = field(default_factory=lambda: _env_int("RAG_FINAL_TOP_K", 5))
     rrf_k: int = field(default_factory=lambda: _env_int("RAG_RRF_K", 60))
+    multiquery_variants: int = field(default_factory=lambda: _env_int("RAG_MULTIQUERY_VARIANTS", 3))
     # Below this reranker score we treat the question as unanswerable from the corpus.
     min_relevance: float = field(default_factory=lambda: _env_float("RAG_MIN_RELEVANCE", 0.15))
     # "llm" (OpenAI, no extra deps), "flashrank" (local cross-encoder), or "none".

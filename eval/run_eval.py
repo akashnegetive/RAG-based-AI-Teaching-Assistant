@@ -48,7 +48,7 @@ def run(dataset: list[dict], scope_by_lecture: bool) -> dict:
 
     ds = Dataset.from_list(rows)
     scores = evaluate(ds, metrics=[faithfulness, answer_relevancy, context_precision, context_recall])
-    summary = {k: float(v) for k, v in scores.items() if isinstance(v, (int, float))}
+    summary = {k: float(v) for k, v in scores.to_pandas().mean(numeric_only=True).items()}
     summary["avg_latency_s"] = round(latency, 2)
     summary["n"] = len(rows)
     return {
