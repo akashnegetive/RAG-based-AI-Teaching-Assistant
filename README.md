@@ -238,22 +238,150 @@ Everything is an environment variable — see `.env.example`.
 
 ---
 
-## Evaluation
+# Evaluation
 
-Retrieval changes are easy to make and hard to judge by eye, so quality is measured:
+This directory contains the evaluation benchmark and runner for measuring the RAG system.
+
+## What is being evaluated?
+
+The evaluation measures retrieval and answer quality using RAGAS.
+
+The benchmark currently contains **25 transcript-grounded questions** covering five lecture transcripts, with five questions per lecture.
+
+The evaluation reports:
+
+- **Faithfulness** — whether the generated answer is supported by the retrieved context.
+- **Answer relevancy** — whether the answer addresses the question.
+- **Context precision** — how much of the retrieved context is relevant to the question.
+- **Context recall** — whether the retrieved context contains the information needed to answer the question.
+- **Average latency** — average time taken to process a question.
+
+RAGAS scores are comparative evaluation signals for this benchmark, not general claims of model accuracy.
+
+## Files
+
+```text
+eval/
+├── dataset.example.jsonl
+├── dataset.jsonl
+├── run_eval.py
+├── generate_dataset.py
+├── README.md
+└── results/
+```
+
+- `dataset.example.jsonl` — example dataset showing the expected format.
+- `dataset.jsonl` — current 25-question benchmark.
+- `run_eval.py` — runs the RAG pipeline and evaluates the generated answers with RAGAS.
+- `generate_dataset.py` — generates transcript-grounded benchmark questions.
+- `results/` — JSON reports produced by evaluation runs.
+
+## Dataset format
+
+Each line in the dataset is a JSON object:
+
+```json
+{
+  "question": "What are the four approaches described in the lecture?",
+  "ground_truth": "Recursive backtracking, top-down DP with memoization, bottom-up DP with tabulation, and bottom-up no-memory DP.",
+  "lecture": "4_Steps_to_Solve_Any_Dynamic_Programming_DP_Problem_144P"
+}
+```
+
+The current benchmark covers:
+
+1. Ridge and Lasso Regression
+2. Bias and Variance
+3. Maximum Subarray / Kadane's Algorithm
+4. Dynamic Programming
+5. Post-Pruning and Pre-Pruning
+
+## Running the evaluation
+
+Install the evaluation dependencies:
 
 ```bash
 pip install -r requirements-eval.txt
-cp eval/dataset.example.jsonl eval/dataset.jsonl    # add your own Q/A pairs
+```
+
+Make sure the lecture corpus has already been indexed locally and that the required API keys are available in `.env`.
+
+Then run:
+
+```bash
 python -m eval.run_eval --dataset eval/dataset.jsonl
 ```
 
-Reports **faithfulness** (is the answer supported by the retrieved passages?), **answer relevancy**,
-**context precision**, **context recall**, and average latency. Results are saved to `eval/results/`
-with the exact config used, so two runs can be compared directly.
+For lecture-level retrieval scoping:
 
-> Add your own before/after numbers here once you've run it — a table of scores is the most convincing
-> thing you can put in a RAG README.
+```bash
+python -m eval.run_eval --dataset eval/dataset.jsonl --scope-by-lecture
+```
+
+Each run saves a JSON report under `eval/results/`.
+
+## Baseline vs V2
+
+The same 25-question benchmark was run twice to measure the effect of the shipped LLM reranker.
+
+Baseline:
+
+```powershell
+$env:RAG_RERANKER = "none"
+python -m eval.run_eval --dataset eval/dataset.jsonl
+```
+
+V2:
+
+```powershell
+$env:RAG_RERANKER = "llm"
+python -m eval.run_eval --dataset eval/dataset.jsonl
+```
+
+Both runs use the same corpus, embeddings, chat model, final top-k setting, and benchmark questions.
+
+### Results
+
+| Metric | Baseline | V2 | Change |
+|---|---:|---:|---:|
+| Faithfulness | 0.834 | 0.652 | -0.182 |
+| Answer relevancy | 0.253 | **0.613** | **+0.360** |
+| Context precision | 0.231 | **0.543** | **+0.312** |
+| Context recall | 0.497 | **0.660** | **+0.163** |
+| Avg. latency | **9.49s** | 17.05s | +7.56s |
+
+On this benchmark, V2 substantially improves answer relevancy, context precision, and context recall. The trade-off is lower measured faithfulness and higher average latency.
+
+These results should be interpreted as a **retrieval-quality trade-off**, not as evidence that V2 improves every evaluation metric.
+
+## Reproducibility
+
+Each evaluation result records the configuration used for the run.
+
+For a fair comparison:
+
+- use the same benchmark questions;
+- use the same lecture corpus;
+- keep the embedding model unchanged;
+- keep the chat model unchanged;
+- keep `RAG_FINAL_TOP_K` unchanged;
+- change only the retrieval component being evaluated.
+
+Do not compare scores from different datasets as if they were a controlled before/after experiment.
+
+## Limitations
+
+This benchmark has several limitations:
+
+- It contains only 25 questions.
+- The questions were generated from lecture transcripts rather than manually validated by an expert.
+- The benchmark covers five lectures and may not represent the full corpus.
+- RAGAS metrics can vary across runs because language models are involved in generation and evaluation.
+- Latency depends on model/API response time and the local environment.
+- The results should not be interpreted as a universal measure of RAG quality.
+
+The purpose of this evaluation is to provide a reproducible, quantitative way to compare retrieval configurations during development.
+
 
 ---
 
